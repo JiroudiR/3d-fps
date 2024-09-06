@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &196353520260947532
 Transform:
@@ -124,9 +124,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 4c3578ba002ed5648b7a48056098f721, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2573733167556495074, guid: 3fd0832c39502fe4f9e18e88a99bf139, type: 3}
     - target: {fileID: -927199367670048503, guid: 4c3578ba002ed5648b7a48056098f721, type: 3}
       propertyPath: m_Name
       value: BigRock_A
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c3578ba002ed5648b7a48056098f721, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
