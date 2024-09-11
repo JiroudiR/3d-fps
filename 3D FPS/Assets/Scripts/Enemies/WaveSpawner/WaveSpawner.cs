@@ -26,7 +26,16 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        countdown -= Time.deltaTime;
+        if (currentWaveIndex >= waves.Length)
+        {
+            Debug.Log("You survived every wave!");
+            return;
+        }
+
+        if (readyToCountDown)
+        {
+            countdown -= Time.deltaTime;
+        }
 
         if (countdown <= 0)
         {
@@ -36,22 +45,28 @@ public class WaveSpawner : MonoBehaviour
 
             StartCoroutine(SpawnWave());
         }
-
+        //Debug.Log(waves[currentWaveIndex].enemiesLeft);
         if (waves[currentWaveIndex].enemiesLeft == 0)
         {
+            readyToCountDown = true;
             currentWaveIndex++;
         }
     }
 
     private IEnumerator SpawnWave()
     {
-        for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
+        if (currentWaveIndex < waves.Length)
         {
-            Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform);
+            for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
+            {
+                Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform);
 
-            enemy.transform.SetParent(spawnPoint.transform);
+                enemy.GetComponent<Health>().isWaveSpawnerEnemy = true;
 
-            yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
+                enemy.transform.SetParent(spawnPoint.transform);
+
+                yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
+            }
         }
     }
 }

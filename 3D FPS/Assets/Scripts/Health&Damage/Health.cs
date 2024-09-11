@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
     public int maximumLives = 5;
     [Tooltip("The amount of time to wait before respawning")]
     public float respawnWaitTime = 3f;
+    public bool isWaveSpawnerEnemy = false;
 
     /// <summary>
     /// Description:
@@ -250,10 +251,11 @@ public class Health : MonoBehaviour
     /// bool
     /// </summary>
     /// <returns>bool: A boolean value representing if the health has died or not (true for dead)</returns>
-    bool CheckDeath()
+    [HideInInspector] public bool CheckDeath()
     {
         if (currentHealth <= 0)
         {
+            Debug.Log("Enemy is dead");
             Die();
             return true;
         }
@@ -271,6 +273,11 @@ public class Health : MonoBehaviour
     /// </summary>
     void Die()
     {
+        if (isWaveSpawnerEnemy)
+        {
+            WaveSpawner waveSpawner = FindObjectOfType<WaveSpawner>();
+            waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
+        }
         if (deathEffect != null)
         {
             if (ragdollHandler != null)
