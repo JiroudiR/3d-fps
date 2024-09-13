@@ -85,6 +85,7 @@ public class Damage : MonoBehaviour
     /// <param name="collision">The Collision that has been collided with</param>
     private void DealDamage(Collision collision)
     {
+        Debug.Log("Deal Damage");
         Health collidedHealth = collision.gameObject.GetComponentInParent<Health>();
         if (collidedHealth == null && collision.rigidbody != null)
         {

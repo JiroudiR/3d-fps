@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -3115796188432635454}
   - component: {fileID: 3984427603643302406}
   - component: {fileID: 5486199537864129953}
+  - component: {fileID: -3296359501232317805}
   m_Layer: 9
   m_Name: FlyingSelfDestructingEnemy
   m_TagString: Untagged
@@ -188,7 +189,7 @@ MonoBehaviour:
   currentLives: 3
   maximumLives: 5
   respawnWaitTime: 3
-  isWaveSpawnerEnemy: 0
+  isWaveSpawnerEnemy: 1
   deathEffect: {fileID: 3092383889052610889, guid: 5b6612dacf4f02b46b2de4d047bd2075, type: 3}
   hitEffect: {fileID: 1986892457192645033, guid: b4b5f92d032abe64b84d7639d84610e8, type: 3}
   ragdollHandler: {fileID: 3984427603643302406}
@@ -230,6 +231,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 5
   destroyChildrenOnDeath: 1
+--- !u!114 &-3296359501232317805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4292625075940306303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6122e9dcd5affed41b6611489d74a00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamId: 1
+  damageAmount: 1
+  destroyAfterDamage: 0
+  dealDamageOnTriggerEnter: 1
+  dealDamageOnTriggerStay: 0
+  dealDamageOnCollision: 1
 --- !u!1001 &5858348798465911932
 PrefabInstance:
   m_ObjectHideFlags: 0

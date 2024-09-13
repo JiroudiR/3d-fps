@@ -170,6 +170,7 @@ public class Health : MonoBehaviour
     /// <param name="damageAmount">The amount of damage to take</param>
     public void TakeDamage(int damageAmount)
     {
+        Debug.Log(currentHealth);
         if (isInvincableFromDamage || currentHealth <= 0 || isAlwaysInvincible)
         {
             return;
@@ -183,6 +184,7 @@ public class Health : MonoBehaviour
             timeToBecomeDamagableAgain = Time.time + invincibilityTime;
             isInvincableFromDamage = true;
             currentHealth = Mathf.Clamp(currentHealth - damageAmount, 0, maximumHealth);
+            
             GameManager.UpdateUIElements();
             CheckDeath();
         }
@@ -251,7 +253,7 @@ public class Health : MonoBehaviour
     /// bool
     /// </summary>
     /// <returns>bool: A boolean value representing if the health has died or not (true for dead)</returns>
-    [HideInInspector] public bool CheckDeath()
+    private bool CheckDeath()
     {
         if (currentHealth <= 0)
         {

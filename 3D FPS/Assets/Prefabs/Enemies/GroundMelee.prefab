@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 5344201165240082450}
   - component: {fileID: 3872924443984927461}
   - component: {fileID: 1420941988157335598}
+  - component: {fileID: -6516169996621098352}
   m_Layer: 9
   m_Name: GroundMelee
   m_TagString: Untagged
@@ -321,7 +322,7 @@ MonoBehaviour:
   currentLives: 3
   maximumLives: 5
   respawnWaitTime: 3
-  isWaveSpawnerEnemy: 0
+  isWaveSpawnerEnemy: 1
   deathEffect: {fileID: 1515603650488286217, guid: b1d61b018291e5043b0be5ee26c12b18, type: 3}
   hitEffect: {fileID: 1986892457192645033, guid: b4b5f92d032abe64b84d7639d84610e8, type: 3}
   ragdollHandler: {fileID: 1420941988157335598}
@@ -382,6 +383,24 @@ MonoBehaviour:
   - {fileID: 3642792238051749156}
   - {fileID: 2307099136455670090}
   timedDestroyer: {fileID: 3872924443984927461}
+--- !u!114 &-6516169996621098352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642792238051749167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6122e9dcd5affed41b6611489d74a00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamId: 1
+  damageAmount: 1
+  destroyAfterDamage: 0
+  dealDamageOnTriggerEnter: 1
+  dealDamageOnTriggerStay: 0
+  dealDamageOnCollision: 1
 --- !u!1001 &8079213361733700103
 PrefabInstance:
   m_ObjectHideFlags: 0
