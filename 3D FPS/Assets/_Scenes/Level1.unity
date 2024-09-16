@@ -1633,24 +1633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfd127b36b1c82f4da6b98d59c6f16f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1049396548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049396540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6122e9dcd5affed41b6611489d74a00f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teamId: 1
-  damageAmount: 1
-  destroyAfterDamage: 1
-  dealDamageOnTriggerEnter: 1
-  dealDamageOnTriggerStay: 1
-  dealDamageOnCollision: 1
 --- !u!1001 &1063169595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2548,15 +2530,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8397704337057649111, guid: ff214c6eeaf5df04f9e8bd20dd7f5b17, type: 3}
       propertyPath: currentHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3666554902976801219, guid: ff214c6eeaf5df04f9e8bd20dd7f5b17, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1049396548}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff214c6eeaf5df04f9e8bd20dd7f5b17, type: 3}
 --- !u!1001 &1834550113
 PrefabInstance:

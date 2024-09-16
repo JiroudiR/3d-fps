@@ -13,6 +13,7 @@ public class EnemyAttackerExplosive : EnemyAttacker
     [Tooltip("The gameobject which creates the explosion effect.")]
     public GameObject explostionEffect = null;
 
+
     /// <summary>
     /// Description:
     /// Causes this enemy to charge up, then explode
@@ -49,6 +50,7 @@ public class EnemyAttackerExplosive : EnemyAttacker
         {
             GameObject obj = Instantiate(explostionEffect, transform.position, transform.rotation, null);
         }
+
         TryDie();
     }
 
