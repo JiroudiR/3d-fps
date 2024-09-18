@@ -167,6 +167,7 @@ MonoBehaviour:
   attackClip: {fileID: 7400000, guid: 2ddcacee8a00fea4486b84d1551266a8, type: 2}
   dieOnExplosion: 1
   explostionEffect: {fileID: 3092383889052610889, guid: 5b6612dacf4f02b46b2de4d047bd2075, type: 3}
+  waveSpawner: {fileID: 617432306456969583, guid: ce5b629bf7a43ca4ca10ad979188ff02, type: 3}
 --- !u!114 &-3115796188432635454
 MonoBehaviour:
   m_ObjectHideFlags: 0
