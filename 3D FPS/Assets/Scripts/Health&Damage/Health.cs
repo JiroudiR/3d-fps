@@ -157,6 +157,7 @@ public class Health : MonoBehaviour
         }
 
         currentHealth = defaultHealth;
+        GameManager.instance.uiManager.UpdateUI();
     }
 
     /// <summary>
@@ -170,7 +171,6 @@ public class Health : MonoBehaviour
     /// <param name="damageAmount">The amount of damage to take</param>
     public void TakeDamage(int damageAmount)
     {
-        Debug.Log(currentHealth);
         if (isInvincableFromDamage || currentHealth <= 0 || isAlwaysInvincible)
         {
             return;

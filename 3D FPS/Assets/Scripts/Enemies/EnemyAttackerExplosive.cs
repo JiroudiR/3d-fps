@@ -13,8 +13,6 @@ public class EnemyAttackerExplosive : EnemyAttacker
     [Tooltip("The gameobject which creates the explosion effect.")]
     public GameObject explostionEffect = null;
 
-    public WaveSpawner waveSpawner;
-
     /// <summary>
     /// Description:
     /// Causes this enemy to charge up, then explode
@@ -67,8 +65,9 @@ public class EnemyAttackerExplosive : EnemyAttacker
     {
         if (dieOnExplosion)
         {
-            waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
-            Debug.Log(waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft);
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Health health = player.GetComponent<Health>();
+            health.TakeDamage(1);
             Destructable.DoDestroy(this.gameObject);
         }
     }

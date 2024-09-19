@@ -6595,7 +6595,7 @@ MonoBehaviour:
   defaultHealth: 3
   maximumHealth: 5
   currentHealth: 3
-  invincibilityTime: 3
+  invincibilityTime: 0
   isAlwaysInvincible: 0
   useLives: 1
   currentLives: 3
