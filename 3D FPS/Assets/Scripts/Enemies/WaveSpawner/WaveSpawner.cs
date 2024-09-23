@@ -6,7 +6,9 @@ public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private float countdown;
 
-    [SerializeField] private GameObject spawnPoint;
+    public Transform[] spawnPoints;
+    private Transform spawnPointLocation;
+    public float invokeRate = 1.0f;
 
     public Wave[] waves;
 
@@ -59,15 +61,32 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
             {
-                Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform);
+                InvokeRepeating("PickSpawnPoints", 1.0f, invokeRate);
+
+                PickSpawnPoints();
+
+                Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPointLocation.transform);
 
                 enemy.GetComponent<Health>().isWaveSpawnerEnemy = true;
 
-                enemy.transform.SetParent(spawnPoint.transform);
+                enemy.transform.SetParent(spawnPointLocation.transform);
 
                 yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
             }
         }
+    }
+
+    void PickSpawnPoints()
+    {
+        int indexNumber = Random.Range(0, spawnPoints.Length);
+        spawnPointLocation = Instantiate(spawnPoints[indexNumber]);
+        Debug.Log("Spawn Point: " + spawnPointLocation.transform);
+    }
+
+    public void DecreaseEnemies()
+    {
+        waves[currentWaveIndex].enemiesLeft--;
+        Debug.Log("Enemies Left: " + waves[currentWaveIndex].enemiesLeft);
     }
 }
 
