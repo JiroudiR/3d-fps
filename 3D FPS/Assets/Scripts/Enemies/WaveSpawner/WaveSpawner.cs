@@ -8,7 +8,6 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform[] spawnPoints;
     private Transform spawnPointLocation;
-    public float invokeRate = 1.0f;
 
     public Wave[] waves;
 
@@ -61,8 +60,6 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
             {
-                InvokeRepeating("PickSpawnPoints", 1.0f, invokeRate);
-
                 PickSpawnPoints();
 
                 Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPointLocation.transform);
@@ -79,7 +76,7 @@ public class WaveSpawner : MonoBehaviour
     void PickSpawnPoints()
     {
         int indexNumber = Random.Range(0, spawnPoints.Length);
-        spawnPointLocation = Instantiate(spawnPoints[indexNumber]);
+        spawnPointLocation = spawnPoints[indexNumber];
         Debug.Log("Spawn Point: " + spawnPointLocation.transform);
     }
 

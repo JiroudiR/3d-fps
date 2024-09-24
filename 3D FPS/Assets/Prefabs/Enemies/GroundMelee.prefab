@@ -397,7 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teamId: 1
   damageAmount: 1
-  destroyAfterDamage: 1
+  destroyAfterDamage: 0
   dealDamageOnTriggerEnter: 0
   dealDamageOnTriggerStay: 0
   dealDamageOnCollision: 1
