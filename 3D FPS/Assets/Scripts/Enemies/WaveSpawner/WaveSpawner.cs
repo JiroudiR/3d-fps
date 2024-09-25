@@ -13,6 +13,8 @@ public class WaveSpawner : MonoBehaviour
 
     public int currentWaveIndex = 0;
 
+    public GameObject gameManager;
+
     private bool readyToCountDown;
 
     private void Start()
@@ -30,6 +32,7 @@ public class WaveSpawner : MonoBehaviour
         if (currentWaveIndex >= waves.Length)
         {
             Debug.Log("You survived every wave!");
+            gameManager.GetComponent<GameManager>().LevelCleared();
             return;
         }
 
