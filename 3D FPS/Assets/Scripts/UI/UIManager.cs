@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.EventSystems;
+using TMPro;
 
 /// <summary>
 /// A class which manages pages of UI elements
@@ -47,6 +48,41 @@ public class UIManager : MonoBehaviour
     // The Input Manager to listen for pausing
     [SerializeField]
     private InputManager inputManager;
+
+    [Header("Wave Spawner UI")]
+    public GameObject waveSpawner;
+    public TMP_Text waveStartingText;
+    public TMP_Text countdownText;
+
+    public void WaveNumberUpdate(bool active)
+    {
+        if (active)
+        {
+            int waveNumber = waveSpawner.GetComponent<WaveSpawner>().currentWaveIndex + 1;
+            if ((waveNumber - 1) <= waveSpawner.GetComponent<WaveSpawner>().waves.Length)
+            {
+                waveStartingText.text = $"Wave {waveNumber} is starting in:";
+            }
+        } else
+        {
+            waveStartingText.text = string.Empty;
+        }
+    }
+
+    public void CountdownUpdate(bool active)
+    {
+        if (active)
+        {
+            float countdown = waveSpawner.GetComponent<WaveSpawner>().countdown;
+            if (countdown > 0)
+            {
+                countdownText.text = $"{countdown}";
+            }
+        } else
+        {
+            countdownText.text = string.Empty;
+        }
+    }
 
     /// <summary>
     /// Description:

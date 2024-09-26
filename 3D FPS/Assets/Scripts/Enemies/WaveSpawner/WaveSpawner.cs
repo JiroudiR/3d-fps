@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    [SerializeField] private float countdown;
+    [HideInInspector] public float countdown;
 
     public Transform[] spawnPoints;
     private Transform spawnPointLocation;
@@ -15,10 +15,14 @@ public class WaveSpawner : MonoBehaviour
 
     public GameObject gameManager;
 
+    public UIManager uiManager;
+
     private bool readyToCountDown;
 
     private void Start()
     {
+        uiManager.GetComponent<UIManager>().WaveNumberUpdate(true);
+        uiManager.GetComponent<UIManager>().CountdownUpdate(true);
         readyToCountDown = true;
 
         for (int i = 0; i < waves.Length; i++)
@@ -39,17 +43,20 @@ public class WaveSpawner : MonoBehaviour
         if (readyToCountDown)
         {
             countdown -= Time.deltaTime;
+            uiManager.GetComponent<UIManager>().CountdownUpdate(true);
         }
 
         if (countdown <= 0)
         {
+            uiManager.GetComponent<UIManager>().CountdownUpdate(false);
+
             readyToCountDown = false;
 
             countdown = waves[currentWaveIndex].timeToNextWave;
 
             StartCoroutine(SpawnWave());
         }
-        //Debug.Log(waves[currentWaveIndex].enemiesLeft);
+        
         if (waves[currentWaveIndex].enemiesLeft == 0)
         {
             readyToCountDown = true;

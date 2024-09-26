@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd2a1986955a784d8bfdf37e99d5189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12
+  moveSpeed: 50
   canMove: 1
   target: {fileID: 0}
   attacker: {fileID: 4292625075940306288}
