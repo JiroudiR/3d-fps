@@ -24,12 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3881437397855799534}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 699.12836, y: -1.674254, z: 346.4295}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3881437397855799532
 MonoBehaviour:
@@ -50,6 +51,7 @@ MonoBehaviour:
   gameIsWinnable: 1
   gameVictoryPageIndex: 1
   victoryEffect: {fileID: 0}
+  resetPlayerPrefsSettings: 1
   gameOverPageIndex: 2
   gameOverEffect: {fileID: 0}
   gameIsOver: 0

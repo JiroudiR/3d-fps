@@ -36,6 +36,8 @@ public class UIManager : MonoBehaviour
     [Tooltip("The effect to create when the player is backing out of a Menu page")]
     public GameObject backEffect;
 
+    public GameObject countdownScreen;
+
     // Whether the application is paused
     private bool isPaused = false;
 
@@ -230,6 +232,7 @@ public class UIManager : MonoBehaviour
         {
             if (isPaused)
             {
+                countdownScreen.SetActive(true);
                 CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.FPS);
                 GoToPage(defaultPage);
                 Time.timeScale = 1;
@@ -237,6 +240,7 @@ public class UIManager : MonoBehaviour
             }
             else
             {
+                countdownScreen.SetActive(false);
                 CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.Menu);
                 GoToPage(pausePageIndex);
                 Time.timeScale = 0;

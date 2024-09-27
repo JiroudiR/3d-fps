@@ -33,40 +33,44 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (currentWaveIndex >= waves.Length)
+        if (Time.timeScale > 0)
         {
-            uiManager.GetComponent<UIManager>().WaveNumberUpdate(false);
-            uiManager.GetComponent<UIManager>().CountdownUpdate(false);
-            Debug.Log("You survived every wave!");
-            gameManager.GetComponent<GameManager>().LevelCleared();
-            return;
-        }
 
-        if (readyToCountDown)
-        {
-            countdown -= Time.deltaTime;
-            uiManager.GetComponent<UIManager>().WaveNumberUpdate(true);
-            uiManager.GetComponent<UIManager>().CountdownUpdate(true);
-        }
+            if (currentWaveIndex >= waves.Length)
+            {
+                uiManager.GetComponent<UIManager>().WaveNumberUpdate(false);
+                uiManager.GetComponent<UIManager>().CountdownUpdate(false);
+                Debug.Log("You survived every wave!");
+                gameManager.GetComponent<GameManager>().LevelCleared();
+                return;
+            }
 
-        if (countdown <= 0)
-        {
-            readyToCountDown = false;
+            if (readyToCountDown)
+            {
+                countdown -= Time.deltaTime;
+                uiManager.GetComponent<UIManager>().WaveNumberUpdate(true);
+                uiManager.GetComponent<UIManager>().CountdownUpdate(true);
+            }
 
-            countdown = waves[currentWaveIndex].timeToNextWave;
+            if (countdown <= 0)
+            {
+                readyToCountDown = false;
 
-            uiManager.GetComponent<UIManager>().WaveNumberUpdate(false);
-            uiManager.GetComponent<UIManager>().CountdownUpdate(false);
+                countdown = waves[currentWaveIndex].timeToNextWave;
 
-            StartCoroutine(SpawnWave());
-        }
-        
-        if (waves[currentWaveIndex].enemiesLeft == 0)
-        {
-            readyToCountDown = true;
-            currentWaveIndex++;
-            uiManager.GetComponent<UIManager>().WaveNumberUpdate(true);
-            uiManager.GetComponent<UIManager>().CountdownUpdate(true);
+                uiManager.GetComponent<UIManager>().WaveNumberUpdate(false);
+                uiManager.GetComponent<UIManager>().CountdownUpdate(false);
+
+                StartCoroutine(SpawnWave());
+            }
+
+            if (waves[currentWaveIndex].enemiesLeft == 0)
+            {
+                readyToCountDown = true;
+                currentWaveIndex++;
+                uiManager.GetComponent<UIManager>().WaveNumberUpdate(true);
+                uiManager.GetComponent<UIManager>().CountdownUpdate(true);
+            }
         }
     }
 
