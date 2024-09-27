@@ -35,6 +35,8 @@ public class WaveSpawner : MonoBehaviour
     {
         if (currentWaveIndex >= waves.Length)
         {
+            uiManager.GetComponent<UIManager>().WaveNumberUpdate(false);
+            uiManager.GetComponent<UIManager>().CountdownUpdate(false);
             Debug.Log("You survived every wave!");
             gameManager.GetComponent<GameManager>().LevelCleared();
             return;
@@ -43,16 +45,18 @@ public class WaveSpawner : MonoBehaviour
         if (readyToCountDown)
         {
             countdown -= Time.deltaTime;
+            uiManager.GetComponent<UIManager>().WaveNumberUpdate(true);
             uiManager.GetComponent<UIManager>().CountdownUpdate(true);
         }
 
         if (countdown <= 0)
         {
-            uiManager.GetComponent<UIManager>().CountdownUpdate(false);
-
             readyToCountDown = false;
 
             countdown = waves[currentWaveIndex].timeToNextWave;
+
+            uiManager.GetComponent<UIManager>().WaveNumberUpdate(false);
+            uiManager.GetComponent<UIManager>().CountdownUpdate(false);
 
             StartCoroutine(SpawnWave());
         }
@@ -61,6 +65,8 @@ public class WaveSpawner : MonoBehaviour
         {
             readyToCountDown = true;
             currentWaveIndex++;
+            uiManager.GetComponent<UIManager>().WaveNumberUpdate(true);
+            uiManager.GetComponent<UIManager>().CountdownUpdate(true);
         }
     }
 

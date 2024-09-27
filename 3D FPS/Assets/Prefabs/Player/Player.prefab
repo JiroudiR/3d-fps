@@ -6545,7 +6545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  lookSpeed: 60
+  lookSpeed: 30
   jumpPower: 8
   gravity: 15
   jumpTimeLeniency: 0.1

@@ -257,7 +257,6 @@ public class Health : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Debug.Log("Enemy is dead");
             Die();
             return true;
         }
@@ -279,6 +278,7 @@ public class Health : MonoBehaviour
         {
             WaveSpawner waveSpawner = FindObjectOfType<WaveSpawner>();
             waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
+            Debug.Log(waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft);
         }
         if (deathEffect != null)
         {

@@ -59,9 +59,9 @@ public class UIManager : MonoBehaviour
         if (active)
         {
             int waveNumber = waveSpawner.GetComponent<WaveSpawner>().currentWaveIndex + 1;
-            if ((waveNumber - 1) <= waveSpawner.GetComponent<WaveSpawner>().waves.Length)
+            if ((waveNumber - 1) < waveSpawner.GetComponent<WaveSpawner>().waves.Length)
             {
-                waveStartingText.text = $"Wave {waveNumber} is starting in:";
+                waveStartingText.text = $"Wave {waveNumber}/{waveSpawner.GetComponent<WaveSpawner>().waves.Length} is starting in:";
             }
         } else
         {
@@ -76,7 +76,7 @@ public class UIManager : MonoBehaviour
             float countdown = waveSpawner.GetComponent<WaveSpawner>().countdown;
             if (countdown > 0)
             {
-                countdownText.text = $"{countdown}";
+                countdownText.text = $"{Mathf.Round(countdown)}";
             }
         } else
         {
