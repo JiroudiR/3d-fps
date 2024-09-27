@@ -17,6 +17,11 @@ public class WaveSpawner : MonoBehaviour
 
     public UIManager uiManager;
 
+    [Header("Key Settings")]
+    public GameObject key;
+
+    public bool spawnKey;
+
     private bool readyToCountDown;
 
     private void Start()
@@ -41,7 +46,13 @@ public class WaveSpawner : MonoBehaviour
                 uiManager.GetComponent<UIManager>().WaveNumberUpdate(false);
                 uiManager.GetComponent<UIManager>().CountdownUpdate(false);
                 Debug.Log("You survived every wave!");
-                gameManager.GetComponent<GameManager>().LevelCleared();
+                if (spawnKey)
+                {
+                    key.SetActive(true);
+                } else
+                {
+                    gameManager.GetComponent<GameManager>().LevelCleared();
+                }
                 return;
             }
 

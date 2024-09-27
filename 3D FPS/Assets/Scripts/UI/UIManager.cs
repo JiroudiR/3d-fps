@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
     public GameObject waveSpawner;
     public TMP_Text waveStartingText;
     public TMP_Text countdownText;
+    public TMP_Text waveEndingText;
 
     public void WaveNumberUpdate(bool active)
     {
@@ -68,6 +69,7 @@ public class UIManager : MonoBehaviour
         } else
         {
             waveStartingText.text = string.Empty;
+            waveEndingText.text = "All waves finished! Head to the lab entrance!";
         }
     }
 
@@ -233,6 +235,7 @@ public class UIManager : MonoBehaviour
             if (isPaused)
             {
                 countdownScreen.SetActive(true);
+                waveEndingText.text = "All waves finished! Head to the lab entrance!";
                 CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.FPS);
                 GoToPage(defaultPage);
                 Time.timeScale = 1;
@@ -241,6 +244,7 @@ public class UIManager : MonoBehaviour
             else
             {
                 countdownScreen.SetActive(false);
+                waveEndingText.text = string.Empty;
                 CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.Menu);
                 GoToPage(pausePageIndex);
                 Time.timeScale = 0;
