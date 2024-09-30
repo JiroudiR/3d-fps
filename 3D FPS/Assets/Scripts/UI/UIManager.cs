@@ -56,19 +56,22 @@ public class UIManager : MonoBehaviour
     public TMP_Text waveStartingText;
     public TMP_Text countdownText;
     public TMP_Text waveEndingText;
+    [SerializeField] private bool waveEnd = false;
 
     public void WaveNumberUpdate(bool active)
     {
         if (active)
         {
+            waveEnd = false;
             int waveNumber = waveSpawner.GetComponent<WaveSpawner>().currentWaveIndex + 1;
             if ((waveNumber - 1) < waveSpawner.GetComponent<WaveSpawner>().waves.Length)
             {
                 waveStartingText.text = $"Wave {waveNumber}/{waveSpawner.GetComponent<WaveSpawner>().waves.Length} is starting in:";
             }
-        } else
+        } else if (waveSpawner.GetComponent<WaveSpawner>().currentWaveIndex >= waveSpawner.GetComponent<WaveSpawner>().waves.Length)
         {
-            waveStartingText.text = string.Empty;
+            waveEnd = true;
+            countdownScreen.SetActive(false);
             waveEndingText.text = "All waves finished! Head to the lab entrance!";
         }
     }
@@ -84,7 +87,8 @@ public class UIManager : MonoBehaviour
             }
         } else
         {
-            countdownText.text = string.Empty;
+            countdownScreen.SetActive(false);
+            //countdownText.text = string.Empty;
         }
     }
 
@@ -234,8 +238,14 @@ public class UIManager : MonoBehaviour
         {
             if (isPaused)
             {
-                countdownScreen.SetActive(true);
-                waveEndingText.text = "All waves finished! Head to the lab entrance!";
+                if (!waveEnd)
+                {
+                    Debug.Log("Not waveEnd");
+                    countdownScreen.SetActive(true);
+                } else
+                {
+                    countdownScreen.SetActive(false);
+                }
                 CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.FPS);
                 GoToPage(defaultPage);
                 Time.timeScale = 1;
@@ -243,8 +253,13 @@ public class UIManager : MonoBehaviour
             }
             else
             {
-                countdownScreen.SetActive(false);
-                waveEndingText.text = string.Empty;
+                if (!waveEnd)
+                {
+                    countdownScreen.SetActive(false);
+                } else
+                {
+                    waveEndingText.text = "All waves finished! Head to the lab entrance!";
+                }
                 CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.Menu);
                 GoToPage(pausePageIndex);
                 Time.timeScale = 0;
