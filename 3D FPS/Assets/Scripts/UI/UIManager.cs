@@ -56,6 +56,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text waveStartingText;
     public TMP_Text countdownText;
     public TMP_Text waveEndingText;
+    public TMP_Text enemiesLeftText;
     [SerializeField] private bool waveEnd = false;
 
     public void WaveNumberUpdate(bool active)
@@ -68,11 +69,15 @@ public class UIManager : MonoBehaviour
             {
                 waveStartingText.text = $"Wave {waveNumber}/{waveSpawner.GetComponent<WaveSpawner>().waves.Length} is starting in:";
             }
-        } else if (waveSpawner.GetComponent<WaveSpawner>().currentWaveIndex >= waveSpawner.GetComponent<WaveSpawner>().waves.Length)
+        } else
         {
             waveEnd = true;
-            countdownScreen.SetActive(false);
-            waveEndingText.text = "All waves finished! Head to the lab entrance!";
+            if (waveSpawner.GetComponent<WaveSpawner>().currentWaveIndex >= waveSpawner.GetComponent<WaveSpawner>().waves.Length)
+            {
+                waveStartingText.text = string.Empty;
+                countdownText.text = string.Empty;
+                waveEndingText.text = "All waves finished! Head to the lab entrance!";
+            }
         }
     }
 
@@ -87,8 +92,8 @@ public class UIManager : MonoBehaviour
             }
         } else
         {
-            countdownScreen.SetActive(false);
-            //countdownText.text = string.Empty;
+            waveStartingText.text = string.Empty;
+            countdownText.text = string.Empty;
         }
     }
 
@@ -242,9 +247,16 @@ public class UIManager : MonoBehaviour
                 {
                     Debug.Log("Not waveEnd");
                     countdownScreen.SetActive(true);
+                    enemiesLeftText.enabled = true;
                 } else
                 {
-                    countdownScreen.SetActive(false);
+                    waveStartingText.text = string.Empty;
+                    countdownText.text = string.Empty;
+                    enemiesLeftText.enabled = true;
+                    if (waveSpawner.GetComponent<WaveSpawner>().currentWaveIndex >= waveSpawner.GetComponent<WaveSpawner>().waves.Length)
+                    {
+                        waveEndingText.text = "All waves finished! Head to the lab entrance!";
+                    }
                 }
                 CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.FPS);
                 GoToPage(defaultPage);
@@ -255,10 +267,13 @@ public class UIManager : MonoBehaviour
             {
                 if (!waveEnd)
                 {
-                    countdownScreen.SetActive(false);
+                    waveStartingText.text = string.Empty;
+                    countdownText.text = string.Empty;
+                    enemiesLeftText.enabled = false;
                 } else
                 {
-                    waveEndingText.text = "All waves finished! Head to the lab entrance!";
+                    waveEndingText.text = string.Empty;
+                    enemiesLeftText.enabled = false;
                 }
                 CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.Menu);
                 GoToPage(pausePageIndex);

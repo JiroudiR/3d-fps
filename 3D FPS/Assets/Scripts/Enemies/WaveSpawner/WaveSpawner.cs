@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    [HideInInspector] public float countdown;
+    public float countdown;
 
     public Transform[] spawnPoints;
     private Transform spawnPointLocation;
@@ -45,6 +45,7 @@ public class WaveSpawner : MonoBehaviour
             {
                 uiManager.GetComponent<UIManager>().WaveNumberUpdate(false);
                 uiManager.GetComponent<UIManager>().CountdownUpdate(false);
+                uiManager.GetComponent<UIManager>().enemiesLeftText.enabled = false;
                 Debug.Log("You survived every wave!");
                 if (spawnKey)
                 {
@@ -99,6 +100,8 @@ public class WaveSpawner : MonoBehaviour
 
                 enemy.transform.SetParent(spawnPointLocation.transform);
 
+                uiManager.GetComponent<UIManager>().enemiesLeftText.text = $"Enemies Left: {waves[currentWaveIndex].enemiesLeft}";
+
                 yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
             }
         }
@@ -114,6 +117,7 @@ public class WaveSpawner : MonoBehaviour
     public void DecreaseEnemies()
     {
         waves[currentWaveIndex].enemiesLeft--;
+        uiManager.GetComponent<UIManager>().enemiesLeftText.text = $"Enemies Left: {waves[currentWaveIndex].enemiesLeft}";
         Debug.Log("Enemies Left: " + waves[currentWaveIndex].enemiesLeft);
     }
 }

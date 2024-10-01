@@ -277,7 +277,7 @@ public class Health : MonoBehaviour
         if (isWaveSpawnerEnemy)
         {
             WaveSpawner waveSpawner = FindObjectOfType<WaveSpawner>();
-            waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
+            GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().DecreaseEnemies();
             Debug.Log(waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft);
         }
         if (deathEffect != null)

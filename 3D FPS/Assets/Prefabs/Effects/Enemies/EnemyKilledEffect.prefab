@@ -181,13 +181,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfDrops: 1
   drops:
-  - {fileID: 8025496173983849875, guid: 9221727c01cc6f04885c1543a92aea89, type: 3}
-  - {fileID: 8451758507711476815, guid: 8f6b70fdb25f98d498e0d1f21cbc0272, type: 3}
   - {fileID: 6194793869883049914, guid: 9860b8ea97be43342a8d36e5a268816f, type: 3}
+  - {fileID: 1740199357721361822, guid: 3061d8071cd6bdb46b2fca0cef86e613, type: 3}
   dropPercentages:
-  - 0.25
-  - 0.25
   - 0.1
+  - 0.25
 --- !u!114 &2994036116951472063
 MonoBehaviour:
   m_ObjectHideFlags: 0
