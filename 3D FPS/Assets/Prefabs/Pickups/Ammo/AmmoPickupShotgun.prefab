@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpEffect: {fileID: 3793393169309718058, guid: 11b5f10b9a38e3d4584f169f8f36e833, type: 3}
   ammunitionID: 2
-  amount: 10
+  amount: 5
 --- !u!54 &8451758507711476800
 Rigidbody:
   m_ObjectHideFlags: 0
