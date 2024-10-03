@@ -68,7 +68,10 @@ public class EnemyAttackerExplosive : EnemyAttacker
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Health health = player.GetComponent<Health>();
             health.TakeDamage(1);
-            GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().DecreaseEnemies();
+            if (health.isWaveSpawnerEnemy)
+            {
+                GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().DecreaseEnemies();
+            }
             Destructable.DoDestroy(this.gameObject);
         }
     }
