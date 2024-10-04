@@ -49,7 +49,6 @@ public class EnemyAttackerExplosive : EnemyAttacker
         {
             GameObject obj = Instantiate(explostionEffect, transform.position, transform.rotation, null);
         }
-
         TryDie();
     }
 
@@ -67,8 +66,9 @@ public class EnemyAttackerExplosive : EnemyAttacker
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Health health = player.GetComponent<Health>();
+            Health enemyHealth = this.GetComponent<Health>();
             health.TakeDamage(1);
-            if (health.isWaveSpawnerEnemy)
+            if (enemyHealth.isWaveSpawnerEnemy)
             {
                 GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().DecreaseEnemies();
             }

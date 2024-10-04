@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2578532, g: 0.095441304, b: 0.015631229, a: 1}
+  m_IndirectSpecularColor: {r: 0.2578563, g: 0.09543667, b: 0.015622518, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4297,6 +4297,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 617432306456969583, guid: ce5b629bf7a43ca4ca10ad979188ff02, type: 3}
+      propertyPath: countdown
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 617432306456969583, guid: ce5b629bf7a43ca4ca10ad979188ff02, type: 3}
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 1438487355}
@@ -4334,15 +4338,15 @@ PrefabInstance:
       objectReference: {fileID: 1026047934}
     - target: {fileID: 617432306456969583, guid: ce5b629bf7a43ca4ca10ad979188ff02, type: 3}
       propertyPath: waves.Array.data[0].timeToNextWave
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 617432306456969583, guid: ce5b629bf7a43ca4ca10ad979188ff02, type: 3}
       propertyPath: waves.Array.data[1].timeToNextWave
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 617432306456969583, guid: ce5b629bf7a43ca4ca10ad979188ff02, type: 3}
       propertyPath: waves.Array.data[2].timeToNextWave
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3217506219145545409, guid: ce5b629bf7a43ca4ca10ad979188ff02, type: 3}
       propertyPath: m_LocalPosition.x

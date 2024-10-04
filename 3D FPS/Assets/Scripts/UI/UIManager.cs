@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 /// <summary>
@@ -76,7 +77,13 @@ public class UIManager : MonoBehaviour
             {
                 waveStartingText.text = string.Empty;
                 countdownText.text = string.Empty;
-                waveEndingText.text = "All waves finished! Head to the lab entrance!";
+                if (SceneManager.GetActiveScene().name == "Level1")
+                {
+                    waveEndingText.text = "All waves finished! Head to the lab entrance!";
+                } else 
+                {
+                    waveEndingText.text = "All waves finished! Get out of the lab!";
+                }
             }
         }
     }
