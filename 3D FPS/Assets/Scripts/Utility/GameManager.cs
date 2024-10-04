@@ -237,6 +237,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.Menu);
             uiManager.allowPause = false;
+            uiManager.enemiesLeftText.text = string.Empty;
             uiManager.GoToPage(gameOverPageIndex);
         }
     }

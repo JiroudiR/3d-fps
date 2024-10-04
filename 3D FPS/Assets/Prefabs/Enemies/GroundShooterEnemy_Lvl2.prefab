@@ -19,8 +19,9 @@ GameObject:
   - component: {fileID: -5730357645085634424}
   - component: {fileID: 7087640983471534824}
   - component: {fileID: 3769725498016207606}
+  - component: {fileID: 2250102767440773520}
   m_Layer: 9
-  m_Name: GroundShooterEnemy_NWS
+  m_Name: GroundShooterEnemy_Lvl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +238,19 @@ MonoBehaviour:
   ragdollHandler: {fileID: 7087640983471534824}
   eventsOnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2250102767440773520}
+        m_TargetAssemblyTypeName: EnemyDrops, Assembly-CSharp
+        m_MethodName: SpawnRandomDrop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   eventsOnRespawn:
     m_PersistentCalls:
       m_Calls: []
@@ -275,6 +288,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 5
   destroyChildrenOnDeath: 1
+--- !u!114 &2250102767440773520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642792238051749167}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff221cf24cafdc4da1e2cda4beab702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfDrops: 1
+  drops:
+  - {fileID: 8451758507711476815, guid: 8f6b70fdb25f98d498e0d1f21cbc0272, type: 3}
+  dropPercentages:
+  - 0.1
 --- !u!1001 &4461592532549728144
 PrefabInstance:
   m_ObjectHideFlags: 0
