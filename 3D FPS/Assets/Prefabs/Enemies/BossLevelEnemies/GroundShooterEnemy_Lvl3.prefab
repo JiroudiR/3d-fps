@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3769725498016207606}
   - component: {fileID: 2250102767440773520}
   m_Layer: 9
-  m_Name: GroundShooterEnemy_Lvl2
+  m_Name: GroundShooterEnemy_Lvl3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,7 +303,9 @@ MonoBehaviour:
   numberOfDrops: 1
   drops:
   - {fileID: 8451758507711476815, guid: 8f6b70fdb25f98d498e0d1f21cbc0272, type: 3}
+  - {fileID: 8025496173983849875, guid: 9221727c01cc6f04885c1543a92aea89, type: 3}
   dropPercentages:
+  - 0.1
   - 0.1
 --- !u!1001 &4461592532549728144
 PrefabInstance:

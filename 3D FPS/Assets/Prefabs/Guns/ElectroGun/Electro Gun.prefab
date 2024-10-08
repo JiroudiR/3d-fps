@@ -86,7 +86,7 @@ MonoBehaviour:
   childProjectileToFireLocation: 1
   fireEffect: {fileID: 2147588475797576189, guid: e7815c59492fa1940b5b9e9476ef9f27, type: 3}
   fireLocationTransform: {fileID: 3949236009640371300}
-  fireDelay: 0.02
+  fireDelay: 1
   fireType: 0
   maximumToFire: 1
   maximumSpreadDegree: 0

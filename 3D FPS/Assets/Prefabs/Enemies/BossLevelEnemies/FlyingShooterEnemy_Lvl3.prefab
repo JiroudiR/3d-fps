@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 621647721172439227}
   - component: {fileID: -2842137298291348842}
   m_Layer: 9
-  m_Name: FlyingShooterEnemy_Lvl2
+  m_Name: FlyingShooterEnemy_Lvl3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   attacker: {fileID: 4699839180939646047}
   maximumAttackRange: 30
   doesAttack: 1
-  lineOfSightToAttack: 1
+  lineOfSightToAttack: 0
   moveWhileAttacking: 1
   needsLineOfSightToMove: 1
   actionState: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2304
   stopDistance: 20
-  stopBehavior: 0
+  stopBehavior: 1
 --- !u!114 &4699839180939646047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +224,9 @@ MonoBehaviour:
   numberOfDrops: 1
   drops:
   - {fileID: 8451758507711476815, guid: 8f6b70fdb25f98d498e0d1f21cbc0272, type: 3}
+  - {fileID: 8025496173983849875, guid: 9221727c01cc6f04885c1543a92aea89, type: 3}
   dropPercentages:
+  - 0.1
   - 0.1
 --- !u!1001 &765716487146116660
 PrefabInstance:

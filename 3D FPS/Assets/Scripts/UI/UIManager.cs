@@ -80,9 +80,12 @@ public class UIManager : MonoBehaviour
                 if (SceneManager.GetActiveScene().name == "Level1")
                 {
                     waveEndingText.text = "All waves finished! Head to the lab entrance!";
-                } else 
+                } else if (SceneManager.GetActiveScene().name == "Level2")
                 {
                     waveEndingText.text = "All waves finished! Get out of the lab!";
+                } else
+                {
+                    waveEndingText.text = "All waves finished! Good luck with the Queen...";
                 }
             }
         }

@@ -259,7 +259,7 @@ MonoBehaviour:
   maximumAttackRange: 30
   doesAttack: 1
   lineOfSightToAttack: 1
-  moveWhileAttacking: 0
+  moveWhileAttacking: 1
   needsLineOfSightToMove: 1
   actionState: 0
   attackEffect: {fileID: 4964255851663953005, guid: ef1264e0e86472b46ad705e5975f314d, type: 3}
