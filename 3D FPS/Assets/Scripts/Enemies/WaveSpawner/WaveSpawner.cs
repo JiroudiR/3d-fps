@@ -22,6 +22,11 @@ public class WaveSpawner : MonoBehaviour
 
     public bool spawnKey;
 
+    [Header("Boss Level")]
+    public GameObject boss;
+
+    public bool spawnBoss;
+
     private bool readyToCountDown;
 
     private void Start()
@@ -50,6 +55,10 @@ public class WaveSpawner : MonoBehaviour
                 if (spawnKey)
                 {
                     key.SetActive(true);
+                    if (spawnBoss)
+                    {
+                        boss.SetActive(true);
+                    }
                 } else
                 {
                     gameManager.GetComponent<GameManager>().LevelCleared();
