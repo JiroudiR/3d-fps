@@ -25,6 +25,8 @@ public class WaveSpawner : MonoBehaviour
     [Header("Boss Level")]
     public GameObject boss;
 
+    public GameObject bossHealthBar;
+
     public bool spawnBoss;
 
     private bool readyToCountDown;
@@ -54,10 +56,14 @@ public class WaveSpawner : MonoBehaviour
                 Debug.Log("You survived every wave!");
                 if (spawnKey)
                 {
-                    key.SetActive(true);
+                    if (key != null)
+                    {
+                        key.SetActive(true);
+                    }
                     if (spawnBoss)
                     {
                         boss.SetActive(true);
+                        bossHealthBar.SetActive(true);
                     }
                 } else
                 {

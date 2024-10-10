@@ -30,9 +30,9 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.74241996, y: 0.74241996, z: 0.74241996}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3242272571804086470}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -116,7 +116,7 @@ MonoBehaviour:
   targetHealth: {fileID: 0}
   healthDisplayImage: {fileID: 4347509402526080897, guid: 521d667b3c2d6104ebea3beb52002fa4, type: 3}
   numberDisplay: {fileID: 0}
-  maximumNumberToDisplay: 25
+  maximumNumberToDisplay: 30
 --- !u!1 &3242272571804086469
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,11 +143,11 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3242272571341929928}
   - {fileID: 3242272572118057936}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -183,9 +183,9 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.74241996, y: 0.74241996, z: 0.74241996}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3242272571804086470}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}

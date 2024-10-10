@@ -68,7 +68,7 @@ public class EnemyAttackerExplosive : EnemyAttacker
             Health health = player.GetComponent<Health>();
             Health enemyHealth = this.GetComponent<Health>();
             health.TakeDamage(1);
-            enemyHealth.TakeDamage(1);
+            enemyHealth.Die();
             Destructable.DoDestroy(this.gameObject);
         }
     }

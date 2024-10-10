@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Projectile
   - WaveSpawner
+  - Boss
   layers:
   - Default
   - TransparentFX

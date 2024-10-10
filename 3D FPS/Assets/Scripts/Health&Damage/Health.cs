@@ -272,7 +272,7 @@ public class Health : MonoBehaviour
     /// Return:
     /// void (no return)
     /// </summary>
-    void Die()
+    public void Die()
     {
         if (isWaveSpawnerEnemy)
         {
