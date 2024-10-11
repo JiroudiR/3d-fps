@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public UIManager uiManager = null;
     [Tooltip("The player gameobject")]
     public GameObject player = null;
+    public GameObject boss = null;
 
     [Header("Scores")]
     [Tooltip("The player's score")]

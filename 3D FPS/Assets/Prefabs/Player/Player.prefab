@@ -5209,7 +5209,7 @@ MonoBehaviour:
   raycastFrom: {fileID: 8692501520834721094}
   minimumDistanceToAim: 10
   maxDistanceToAim: 1000
-  alwaysShootAtTarget: 1
+  alwaysShootAtTarget: 0
   enemy: {fileID: 0}
   projectileGameObject: {fileID: 4968222865802635404, guid: adb0efb224e1427428207f65e508a35f, type: 3}
   childProjectileToFireLocation: 0
@@ -17431,7 +17431,7 @@ MonoBehaviour:
   raycastFrom: {fileID: 0}
   minimumDistanceToAim: 10
   maxDistanceToAim: 1000
-  alwaysShootAtTarget: 1
+  alwaysShootAtTarget: 0
   enemy: {fileID: 0}
   projectileGameObject: {fileID: 8748350931074695798, guid: a6a584cfab161174391ce4abade15506, type: 3}
   childProjectileToFireLocation: 1

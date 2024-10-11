@@ -20,9 +20,9 @@ public class HealthDisplay : UIelement
 
     private void Start()
     {
-        if (targetHealth == null && (GameManager.instance != null && GameManager.instance.player != null))
+        if (targetHealth == null && (GameManager.instance != null && GameManager.instance.boss != null))
         {
-            targetHealth = GameManager.instance.player.GetComponentInChildren<Health>();
+            targetHealth = GameManager.instance.boss.GetComponentInChildren<Health>();
         }
         UpdateUI();
     }
@@ -48,6 +48,7 @@ public class HealthDisplay : UIelement
         if (targetHealth != null)
         {
             SetChildImageNumber(targetHealth.currentHealth);
+            Debug.Log(targetHealth.currentHealth);
         }
     }
 
@@ -65,6 +66,7 @@ public class HealthDisplay : UIelement
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
             Destroy(transform.GetChild(i).gameObject);
+            Debug.Log("Health Bar: " + transform.childCount);
         }
 
         if (healthDisplayImage != null)

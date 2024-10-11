@@ -186,6 +186,11 @@ public class Health : MonoBehaviour
             currentHealth = Mathf.Clamp(currentHealth - damageAmount, 0, maximumHealth);
             
             GameManager.UpdateUIElements();
+            if (GameObject.FindGameObjectWithTag("Boss"))
+            {
+                HealthDisplay bossHealthBar = this.GetComponent<HealthDisplay>();
+                bossHealthBar.UpdateUI();
+            }
             CheckDeath();
         }
     }
