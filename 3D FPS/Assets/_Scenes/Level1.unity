@@ -3204,6 +3204,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -4174,6 +4175,10 @@ PrefabInstance:
       propertyPath: targetHealth
       value: 
       objectReference: {fileID: 1049396542}
+    - target: {fileID: 4764114872455492609, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5109313700234458262, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

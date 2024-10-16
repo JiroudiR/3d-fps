@@ -202,6 +202,7 @@ public class GameManager : MonoBehaviour
             uiManager.GoToPage(gameVictoryPageIndex);
             if (victoryEffect != null)
             {
+                uiManager.GetComponent<UIManager>().waveEndingText.text = string.Empty;
                 Instantiate(victoryEffect, transform.position, transform.rotation, null);
             }
         }

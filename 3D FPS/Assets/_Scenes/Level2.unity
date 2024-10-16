@@ -337,6 +337,10 @@ PrefabInstance:
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4764114872455492609, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764114872455492609, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d2d0968df6183894f94a4fd7107af84c, type: 3}
@@ -809,6 +813,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -1333,6 +1338,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -2645,6 +2651,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -3118,6 +3125,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -3325,6 +3333,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -4065,6 +4074,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -4747,6 +4757,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -4880,6 +4891,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -4958,6 +4970,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -5311,6 +5324,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}
@@ -5437,6 +5451,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
   ragdollHandler: {fileID: 0}

@@ -38,6 +38,7 @@ public class Health : MonoBehaviour
     public float respawnWaitTime = 3f;
     public bool isWaveSpawnerEnemy = false;
 
+    public HealthDisplay bossHealthBar;
     /// <summary>
     /// Description:
     /// Standard Unity function called once before the first Update call
@@ -186,9 +187,8 @@ public class Health : MonoBehaviour
             currentHealth = Mathf.Clamp(currentHealth - damageAmount, 0, maximumHealth);
             
             GameManager.UpdateUIElements();
-            if (GameObject.FindGameObjectWithTag("Boss"))
+            if (gameObject.CompareTag("Boss"))
             {
-                HealthDisplay bossHealthBar = this.GetComponent<HealthDisplay>();
                 bossHealthBar.UpdateUI();
             }
             CheckDeath();
