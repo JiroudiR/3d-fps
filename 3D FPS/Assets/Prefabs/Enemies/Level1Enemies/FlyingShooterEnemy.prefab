@@ -155,6 +155,8 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 1
+  healthScript: {fileID: -3219269683412516719}
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 1515603650488286217, guid: b1d61b018291e5043b0be5ee26c12b18, type: 3}
   hitEffect: {fileID: 1986892457192645033, guid: b4b5f92d032abe64b84d7639d84610e8, type: 3}
   ragdollHandler: {fileID: 2725768548962742277}

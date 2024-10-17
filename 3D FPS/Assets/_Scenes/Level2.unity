@@ -246,7 +246,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 639498534065131555, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 30
+      value: 30.00003
       objectReference: {fileID: 0}
     - target: {fileID: 1153457259002388893, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: waveSpawner
@@ -254,15 +254,15 @@ PrefabInstance:
       objectReference: {fileID: 1200167705}
     - target: {fileID: 1278667349209974752, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_Intensity
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1891638614946942523, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_Intensity
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2073703191311150902, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_Intensity
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2990722150503377910, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -318,11 +318,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4231960538357202748, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_Intensity
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4579410305755249247, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_Intensity
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4659868417289985671, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_SizeDelta.x
@@ -334,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4764114872455492609, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_Pitch
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4764114872455492609, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_Volume
@@ -394,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6373498992001862155, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_Intensity
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6745005489711465401, guid: ea2e5d50d0639834cbbb89773c3391d5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -813,6 +813,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -1338,6 +1339,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -2651,6 +2653,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -3125,6 +3128,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -3333,6 +3337,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -4074,6 +4079,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -4757,6 +4763,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -4891,6 +4898,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -4970,6 +4978,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -5324,6 +5333,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
@@ -5451,6 +5461,7 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
   bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}

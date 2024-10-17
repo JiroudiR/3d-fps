@@ -240,6 +240,7 @@ public class GameManager : MonoBehaviour
             CursorManager.instance.ChangeCursorMode(CursorManager.CursorState.Menu);
             uiManager.allowPause = false;
             uiManager.enemiesLeftText.text = string.Empty;
+            uiManager.GetComponent<UIManager>().waveEndingText.text = string.Empty;
             uiManager.GoToPage(gameOverPageIndex);
         }
     }

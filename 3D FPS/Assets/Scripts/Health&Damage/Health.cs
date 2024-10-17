@@ -38,6 +38,7 @@ public class Health : MonoBehaviour
     public float respawnWaitTime = 3f;
     public bool isWaveSpawnerEnemy = false;
 
+    public Health healthScript;
     public HealthDisplay bossHealthBar;
     /// <summary>
     /// Description:
@@ -283,7 +284,7 @@ public class Health : MonoBehaviour
         {
             WaveSpawner waveSpawner = FindObjectOfType<WaveSpawner>();
             GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().DecreaseEnemies();
-            Debug.Log(waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft);
+            healthScript.enabled = false;
         }
         if (deathEffect != null)
         {
