@@ -100,7 +100,8 @@ public class AmmoTracker : MonoBehaviour
         }
         transform.parent = null;
         SceneManager.sceneUnloaded += OnSceneUnLoaded;
-        DontDestroyOnLoad(this.gameObject);
+        if (_instance.isPersistent)
+            DontDestroyOnLoad(this.gameObject);
     }
     #endregion
 
