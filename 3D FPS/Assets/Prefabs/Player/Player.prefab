@@ -6545,7 +6545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  lookSpeed: 30
+  lookSpeed: 20
   jumpPower: 8
   gravity: 15
   jumpTimeLeniency: 0.1
@@ -6602,6 +6602,8 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isWaveSpawnerEnemy: 0
+  healthScript: {fileID: 0}
+  bossHealthBar: {fileID: 0}
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 6757922776264719137, guid: abca70dbb460dbc4885484ec20c2dd7b, type: 3}
   ragdollHandler: {fileID: 0}
